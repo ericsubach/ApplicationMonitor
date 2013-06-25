@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # Copyright 2013 Eric Subach. All Rights Reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,29 +11,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-# SystemHarness / ApplicationMonitor
-
-"""Provides the ability to start/stop all the programs needed in a system."""
-
-__author__ = 'subach.code@gmail.com (Eric Subach)'
-
-import os
-import os.path
-import sys
-
-# Append relative path to libraries.
-tPathsToAppend = [
-                  'lib',
-                  'test',
-                  'test/class',
-                  'test/unit',
-                 ]
-
-for tPath in tPathsToAppend:
-   sys.path.append(os.path.join(os.path.dirname(__file__), tPath))
-
-from Harness import Harness
-
-tHarness = Harness()
-tHarness.run()

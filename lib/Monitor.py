@@ -4,11 +4,8 @@ from IndicatorChar import IndicatorChar
 from Process import Process
 
 class Harness:
-   def __init__(self):
-      tProcess1 = Process('Process 1', 'python ./lib/testProcess1.py', 'process1')
-      tProcess2 = Process('Process 2', 'python ./lib/testProcess2.py', 'process2')
-      
-      self.processes = [ tProcess1, tProcess2 ]
+   def __init__(self, aProcesses):
+      self.processes = aProcesses
       self.indicator = IndicatorChar()
       
       self.initCurses()
