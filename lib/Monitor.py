@@ -1,12 +1,19 @@
 import curses
+import os
+import sys
 
 from IndicatorChar import IndicatorChar
 from Process import Process
 
-class Harness:
+class Monitor:
    def __init__(self, aProcesses):
       self.processes = aProcesses
       self.indicator = IndicatorChar()
+      
+      #old_stdout, old_stderr = sys.stdout, sys.stderr
+      tDevNull = open(os.devnull, 'w')
+      sys.stdout = tDevNull
+      sys.stderr = tDevNull
       
       self.initCurses()
 
@@ -86,11 +93,11 @@ class Harness:
       
    def cleanupCurses(self):
       # Reverse settings
+      #curses.initscr()
       curses.nocbreak()
       curses.echo()
       curses.curs_set(1)
       self.screen.keypad(0)
-
       curses.endwin()
       
    def cleanup(self):
