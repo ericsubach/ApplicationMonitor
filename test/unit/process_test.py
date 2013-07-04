@@ -1,10 +1,11 @@
 import curses
-import unittest
-from mock import patch, Mock
 import subprocess
+import unittest
 
-from TestProcess import TestProcess
-from Process import Process
+from mock import patch, Mock
+
+from test_process import TestProcess
+from process import Process
 
 class ProcessTest(unittest.TestCase):
    def setUp(self):

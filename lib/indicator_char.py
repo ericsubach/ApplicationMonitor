@@ -1,12 +1,14 @@
+import curses
+
 from datetime import datetime, timedelta
 
-class IndicatorChar:
+class IndicatorChar(object):
    def __init__(self):
       self.chars = ['|', '/', '-', '\\']
       self.index = 0
       self.lastChangeTime = datetime.now()
       self.timeDelta = timedelta(milliseconds=500)
-      
+   
    def getChar(self):
       tTimeNow = datetime.now()
       if (tTimeNow - self.lastChangeTime) > self.timeDelta:
