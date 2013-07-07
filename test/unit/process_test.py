@@ -9,7 +9,7 @@ from process import Process
 
 class ProcessTest(unittest.TestCase):
    def setUp(self):
-      self.process = Process('FakeProcess', '/Fake/Path', 'FakeLog') #TestProcess()
+      self.process = Process('FakeProcess', '/Fake/Path', 'FakeLog', 0) #TestProcess()
       
       # Setup mock TestProcess
       # TODO can i patch popen? look up patch...set up to create a mock

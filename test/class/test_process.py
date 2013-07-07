@@ -1,5 +1,5 @@
-from FakeSubprocess import FakeSubprocess
-from Process import Process
+from fake_subprocess import FakeSubprocess
+from process import Process
 
 class TestProcess(Process):
    def __init__(self):

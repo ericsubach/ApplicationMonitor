@@ -45,8 +45,10 @@ def main():
    try:
       tHarness.run()
    except Exception as tException:
-      print tException
-      raise
+      if not __debug__:
+         print tException
+      else:
+         raise
 
 def ensureMinPythonRequirement():
    if sys.version_info[0] != 2 or sys.version_info[1] < 7:

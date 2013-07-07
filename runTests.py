@@ -16,7 +16,7 @@ tPathsToAppend = [
 for tPath in tPathsToAppend:
    sys.path.append(os.path.join(os.path.dirname(__file__), tPath))
 
-from test.unit.ProcessTest import *
+from test.unit.process_test import *
 
 tSuite = unittest.TestLoader().loadTestsFromTestCase(ProcessTest)
 unittest.TextTestRunner(verbosity=2).run(tSuite)
