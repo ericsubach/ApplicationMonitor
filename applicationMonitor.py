@@ -3,7 +3,7 @@
 """Provides the ability to interactively start/stop all the programs needed 
 in a system."""
 
-__author__ = 'subach.code@gmail.com (Eric Subach)'
+__author__ = 'eric.subach@gmail.com (Eric Subach)'
 
 import os
 import os.path
